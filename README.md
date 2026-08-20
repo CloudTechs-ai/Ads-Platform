@@ -89,4 +89,4 @@ A minimal python application that uses the following resources:
 * Production Debugging
 
 CloudTechs - Terraform Certified Engineers 
-<img width="1600" height="1600" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
+<img width="600" height="600" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
