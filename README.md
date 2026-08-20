@@ -1,3 +1,4 @@
+<img width="600" height="600" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/8db2eacb-13f9-4062-96f7-a694070dd75f" />
 Ads Platform — AWS Web App Deployment with Terraform + Docker
 
 📌 Overview
@@ -90,4 +91,7 @@ A minimal python application that uses the following resources:
 
 CloudTechs - Terraform Certified Engineers
 
-<img width="250" height="250" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
+<img width="200" height="200" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
+
+<img width="200" height="200" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/283c46d6-084e-473b-859f-f8d8a7515ce3" />
+
