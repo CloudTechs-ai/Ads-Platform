@@ -90,4 +90,4 @@ A minimal python application that uses the following resources:
 
 CloudTechs - Terraform Certified Engineers
 
-<img width="100" height="100" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
+<img width="250" height="250" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
