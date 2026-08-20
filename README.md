@@ -23,8 +23,6 @@ Cloudflare Integration → Edge performance and resilience
 <img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
 
 🔗 Links
-GitHub Repository: Ads Platform
-
 Live Domain: adsplatform.dev
 
 Configure AWS credentials
