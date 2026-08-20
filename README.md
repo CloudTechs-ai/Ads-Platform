@@ -88,12 +88,15 @@ A minimal python application that uses the following resources:
 * Infrastructure Security
 * Production Debugging
 
-CloudTechs - Terraform Certified Engineers
+CloudTechs - Certified Cloud/Dev Ops Engineers 
 
 <img width="200" height="200" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
 
 <img width="200" height="200" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/283c46d6-084e-473b-859f-f8d8a7515ce3" />
 
 <img width="200" height="200" alt="ccna" src="https://github.com/user-attachments/assets/0670cbcc-0b0a-4c1d-9838-8d42ae0a0cb4" />
+
+<img width="200" height="200" alt="comptia-security-ce-certification (2)" src="https://github.com/user-attachments/assets/76bb47c2-925a-4250-a6a3-ae5cf1859012" />
+
 
 
