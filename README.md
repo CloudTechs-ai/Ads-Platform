@@ -3,6 +3,11 @@ Ads Platform — AWS Web App Deployment with Terraform + Docker
 📌 Overview
 This project demonstrates the deployment of a full Ads Platform web application to AWS using Terraform, Docker, AWS CloudWatch, and Cloudflare. It highlights infrastructure automation, containerization, monitoring, and edge performance optimization.
 
+
+🏗 Architecture
+<img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
+
+
 ✨ Features
 Terraform Infrastructure as Code → Automated provisioning of AWS resources for repeatable deployments
 
@@ -17,10 +22,6 @@ Application Load Balancer → Routing traffic to ECS tasks on port 8000
 AWS CloudWatch → Monitoring and logging for production readiness
 
 Cloudflare Integration → Edge performance and resilience
-
-
-🏗 Architecture
-<img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
 
 🔗 Links
 Live Domain: adsplatform.dev
