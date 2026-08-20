@@ -89,4 +89,4 @@ A minimal python application that uses the following resources:
 * Production Debugging
 
 CloudTechs - Terraform Certified Engineers 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fbcd0b55-077b-4aeb-8ff4-2e690e8d023a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<img width="1600" height="1600" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
