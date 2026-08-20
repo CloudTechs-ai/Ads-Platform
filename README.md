@@ -94,3 +94,6 @@ CloudTechs - Terraform Certified Engineers
 
 <img width="200" height="200" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/283c46d6-084e-473b-859f-f8d8a7515ce3" />
 
+<img width="200" height="200" alt="ccna" src="https://github.com/user-attachments/assets/0670cbcc-0b0a-4c1d-9838-8d42ae0a0cb4" />
+
+
