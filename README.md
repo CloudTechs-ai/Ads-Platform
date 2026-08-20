@@ -1,4 +1,3 @@
-<img width="600" height="600" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/8db2eacb-13f9-4062-96f7-a694070dd75f" />
 Ads Platform — AWS Web App Deployment with Terraform + Docker
 
 📌 Overview
