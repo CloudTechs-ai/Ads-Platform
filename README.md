@@ -1,6 +1,44 @@
-# Ads Platform
+Ads Platform — AWS Web App Deployment with Terraform + Docker
 
-A minimal python application for use while learning all about
+📌 Overview
+This project demonstrates the deployment of a full Ads Platform web application to AWS using Terraform, Docker, AWS CloudWatch, and Cloudflare. It highlights infrastructure automation, containerization, monitoring, and edge performance optimization.
+
+✨ Features
+Terraform Infrastructure as Code → Automated provisioning of AWS resources for repeatable deployments
+
+Docker Containers → Portable app packaging for rapid iteration
+
+Amazon ECS + Fargate → Scalable container orchestration in private subnets
+
+RDS PostgreSQL → Managed database with secure subnet isolation
+
+Application Load Balancer → Routing traffic to ECS tasks on port 8000
+
+AWS CloudWatch → Monitoring and logging for production readiness
+
+Cloudflare Integration → Edge performance and resilience
+
+
+🏗 Architecture
+<img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
+
+🔗 Links
+GitHub Repository: Ads Platform
+
+Live Domain: adsplatform.dev
+
+Configure AWS credentials
+
+Run terraform init and terraform apply
+
+Build and run Docker containers
+
+Access the application via the live domain
+
+🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+A minimal python application that uses the following resources:
 
 * AWS
 * Terraform
@@ -50,4 +88,3 @@ A minimal python application for use while learning all about
 * Infrastructure Security
 * Production Debugging
 
-For Course Content Visit : [https://sbcode.net/iac/](https://sbcode.net/iac/)
