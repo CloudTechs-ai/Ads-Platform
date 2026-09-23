@@ -437,63 +437,6 @@ Building practical cloud infrastructure with a focus on:
 
 **AWS • Terraform • Kubernetes • Infrastructure Automation • SRE • Cloud Networking • Platform Engineering**
 
----
-
-## 📜 License
-
-This project is provided for educational and demonstration purposes.
-
-
-* AWS
-* Terraform
-* Infrastructure as Code (IaC)
-* Platform Engineering
-* Site Reliability Engineering (SRE)
-* Docker
-* Docker Compose
-* Amazon ECS
-* AWS Fargate
-* Application Load Balancers (ALB)
-* Amazon RDS
-* PostgreSQL
-* SQLite
-* FastAPI
-* Python
-* GitHub
-* GitHub Actions
-* CI/CD Pipelines
-* Continuous Deployment
-* Cloudflare
-* Content Delivery Networks (CDN)
-* TLS / SSL
-* DNS
-* HTTPS
-* AWS IAM
-* Security Groups
-* Virtual Private Clouds (VPC)
-* Subnets
-* Route Tables
-* Internet Gateways
-* Amazon ECR
-* CloudWatch
-* Grafana
-* Observability
-* Monitoring & Alerting
-* Production Hardening
-* Secure HTTP Headers
-* Container Networking
-* Environment Variables
-* Linux & WSL
-* VS Code Remote Development
-* Git Branching & Pull Requests
-* Cloud Architecture
-* Deployment Automation
-* Rolling Deployments
-* Infrastructure Security
-* Production Debugging
-
-CloudTechs - Certified Cloud/Dev Ops Engineers 
-
 <img width="200" height="200" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
 
 <img width="200" height="200" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/283c46d6-084e-473b-859f-f8d8a7515ce3" />
@@ -501,6 +444,12 @@ CloudTechs - Certified Cloud/Dev Ops Engineers
 <img width="200" height="200" alt="ccna" src="https://github.com/user-attachments/assets/0670cbcc-0b0a-4c1d-9838-8d42ae0a0cb4" />
 
 <img width="200" height="200" alt="comptia-security-ce-certification (2)" src="https://github.com/user-attachments/assets/76bb47c2-925a-4250-a6a3-ae5cf1859012" />
+
+---
+
+## 📜 License
+
+This project is provided for educational and demonstration purposes.
 
 
 
