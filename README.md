@@ -68,6 +68,7 @@ This project demonstrates practical experience with:
 ---
 
 🏗 Architecture
+
 <img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
 
 ### Request Flow
