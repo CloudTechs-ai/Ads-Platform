@@ -1,69 +1,73 @@
 # ☁️ CloudTechs Ads Platform — AWS Cloud-Native Deployment
+[![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws)](#)
+[![Terraform](https://img.shields.io/badge/Terraform-Infrastructure%20as%20Code-7B42BC?logo=terraform)](#)
+[![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?logo=docker)](#)
+[![ECS](https://img.shields.io/badge/Amazon%20ECS-Fargate-FF9900?logo=amazon-aws)](#)
+[![ECR](https://img.shields.io/badge/Amazon%20ECR-Container%20Registry-FF9900?logo=amazon-aws)](#)
+[![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?logo=python)](#)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-RDS-4169E1?logo=postgresql)](#)
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=github)](#)
+[![Cloudflare](https://img.shields.io/badge/Cloudflare-Edge%20Security-F38020?logo=cloudflare)](#)
+[![Grafana](https://img.shields.io/badge/Grafana-Observability-F46800?logo=grafana)](#)
 
-[![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws)](#) [![Terraform](https://img.shields.io/badge/Terraform-Infrastructure%20as%20Code-7B42BC?logo=terraform)](#) [![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?logo=docker)](#) [![ECS](https://img.shields.io/badge/Amazon%20ECS-Fargate-FF9900?logo=amazon-aws)](#) [![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?logo=python)](#) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-RDS-4169E1?logo=postgresql)](#) [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=github)](#) [![Cloudflare](https://img.shields.io/badge/Cloudflare-Edge%20Security-F38020?logo=cloudflare)](#) [![Grafana](https://img.shields.io/badge/Grafana-Observability-F46800?logo=grafana)](#)
+> **A production-style AWS cloud engineering project demonstrating Infrastructure as Code, containerization, cloud networking, security, observability, CI/CD, and automated application deployment.**
 
-> **A production-style AWS cloud engineering project demonstrating Infrastructure as Code, containerization, cloud networking, security, observability, CI/CD, and scalable application deployment.**
+**Live demonstration:** https://adsplatform.dev
 
-This project deploys a **Python/FastAPI web application to AWS** using **Terraform, Docker, Amazon ECS/Fargate, Amazon RDS PostgreSQL, Application Load Balancer, CloudWatch, Grafana, GitHub Actions, and Cloudflare**.
-
-The environment is designed to demonstrate how a cloud engineer can take an application from **source code → infrastructure → container image → automated deployment → production-style AWS architecture** using repeatable Infrastructure as Code rather than manually configuring resources through the AWS Console.
-
----
-
-# 🏴 Technology Stack
-
-### ☁️ Cloud
-
-`AWS` `VPC` `ECS` `Fargate` `ECR` `RDS PostgreSQL` `ALB` `IAM` `CloudWatch`
-
-### 🏗 Infrastructure as Code
-
-`Terraform` `HCL` `Infrastructure as Code` `State Management` `Automated Provisioning`
-
-### 🐳 Containers
-
-`Docker` `Docker Compose` `Amazon ECR` `Amazon ECS` `AWS Fargate`
-
-### 🌐 Networking
-
-`VPC` `Public Subnets` `Private Subnets` `Route Tables` `Internet Gateway` `Security Groups` `Load Balancing` `DNS`
-
-### 🔐 Security
-
-`AWS IAM` `Least Privilege` `Security Groups` `Private Networking` `TLS/HTTPS` `Cloudflare` `Secure HTTP Headers`
-
-### 🚀 DevOps / CI/CD
-
-`GitHub Actions` `CI/CD` `Automated Builds` `Docker Image Publishing` `ECR` `ECS Deployments`
-
-### 📊 Observability / SRE
-
-`AWS CloudWatch` `Grafana` `Application Logs` `Container Logs` `Metrics` `Health Checks` `Troubleshooting`
-
-### 💻 Application
-
-`Python` `FastAPI` `PostgreSQL` `SQLite` `REST APIs`
+**Repository:** https://github.com/CloudTechs-ai/Ads-Platform
 
 ---
 
-# 🎯 Project Highlights
+# 🚀 Project Overview
 
-This project demonstrates practical experience with:
+CloudTechs Ads Platform is a cloud-native Python/FastAPI application deployed to AWS using **Terraform, Docker, Amazon ECR, Amazon ECS/Fargate, Amazon RDS PostgreSQL, Application Load Balancer, CloudWatch, Grafana, GitHub Actions, and Cloudflare**.
 
-* ☁️ **AWS cloud architecture**
-* 🏗 **Terraform Infrastructure as Code**
-* 🐳 **Docker containerization**
-* ⚙️ **Amazon ECS/Fargate**
-* 🌐 **AWS VPC networking**
-* 🔐 **IAM and network security**
-* 🗄️ **Amazon RDS PostgreSQL**
-* ⚖️ **Application Load Balancing**
-* 📊 **CloudWatch observability**
-* 📈 **Grafana monitoring**
-* 🔄 **GitHub Actions CI/CD**
-* 🌎 **Cloudflare edge integration**
-* 🛠️ **Multi-layer cloud troubleshooting**
-* 🚀 **Automated infrastructure provisioning**
+The project demonstrates the complete cloud engineering lifecycle:
+
+```text
+Design
+   ↓
+Provision
+   ↓
+Secure
+   ↓
+Containerize
+   ↓
+Deploy
+   ↓
+Monitor
+   ↓
+Troubleshoot
+   ↓
+Automate
+```
+
+Rather than manually creating infrastructure through the AWS Console, the environment is provisioned using **Terraform Infrastructure as Code** and application deployments are automated through **GitHub Actions**.
+
+The repository is designed to be **portable across AWS accounts**. Account-specific infrastructure, credentials, database passwords, domains, and deployment configuration are supplied at deployment time rather than hardcoded into the application.
+
+---
+
+# 🎯 Engineering Goals
+
+This project was built to demonstrate practical experience with:
+
+* ☁️ AWS cloud architecture
+* 🏗️ Terraform Infrastructure as Code
+* 🐳 Docker containerization
+* ⚙️ Amazon ECS/Fargate
+* 📦 Amazon ECR
+* 🌐 AWS VPC networking
+* 🔐 IAM and security groups
+* 🗄️ Amazon RDS PostgreSQL
+* ⚖️ Application Load Balancing
+* 🔒 ACM/TLS/HTTPS
+* 🌎 Cloudflare DNS and edge services
+* 🔄 GitHub Actions CI/CD
+* 📊 CloudWatch logging and monitoring
+* 📈 Grafana observability
+* 🛠️ Multi-layer infrastructure troubleshooting
+* 🚀 Repeatable cloud deployments
 
 ---
 
@@ -71,7 +75,7 @@ This project demonstrates practical experience with:
 
 <img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
 
-### Request Flow
+## Request Flow
 
 ```text
                          Internet
@@ -86,6 +90,7 @@ This project demonstrates practical experience with:
                   ┌────────────────────┐
                   │ Application Load   │
                   │ Balancer           │
+                  │ HTTP → HTTPS       │
                   └─────────┬──────────┘
                             │
                             ▼
@@ -94,322 +99,368 @@ This project demonstrates practical experience with:
                  │     Fargate         │
                  │                     │
                  │  FastAPI Container  │
+                 │       :8000         │
                  └─────────┬───────────┘
                            │
                            ▼
                  ┌─────────────────────┐
                  │   Amazon RDS        │
                  │   PostgreSQL        │
+                 │     Private         │
                  └─────────────────────┘
 ```
 
-Terraform provisions the underlying AWS infrastructure and establishes the networking, security, compute, database, load-balancing, and observability components required by the application.
-
----
-
-# 🏗 Infrastructure as Code — Terraform
-
-The AWS environment is provisioned using **Terraform**.
-
-Instead of manually creating resources through the AWS Console, infrastructure is represented as version-controlled configuration.
-
-Terraform manages resources including:
-
-* VPC
-* Public and private subnets
-* Route tables
-* Internet Gateway
-* Security groups
-* IAM resources
-* ECS clusters
-* ECS services
-* Fargate tasks
-* ECR repositories
-* Application Load Balancer
-* Target groups
-* RDS PostgreSQL
-* CloudWatch resources
-
-### Engineering Benefits
+### Network Security Model
 
 ```text
-Terraform
-    │
-    ├── Version Controlled
-    ├── Reproducible
-    ├── Auditable
-    ├── Automated
-    └── Consistent
+Internet
+   │
+   ▼
+Cloudflare
+   │
+   ▼
+ALB Security Group
+   │
+   │ TCP 443 / 80
+   ▼
+ECS Security Group
+   │
+   │ TCP 8000
+   ▼
+Fargate Container
+   │
+   │ TCP 5432
+   ▼
+RDS Security Group
+   │
+   ▼
+Private PostgreSQL
 ```
 
-This makes the environment easier to reproduce, modify, review, and troubleshoot.
+The database is not intended to be directly exposed to the public internet.
 
 ---
 
-# ☁️ AWS VPC & Networking
+# 🧰 Technology Stack
 
-The application runs inside a dedicated **AWS VPC** with network segmentation between internet-facing infrastructure and backend workloads.
+## ☁️ Cloud
 
-The architecture incorporates:
+`AWS` `VPC` `ECS` `Fargate` `ECR` `RDS PostgreSQL` `ALB` `IAM` `CloudWatch` `ACM`
 
+## 🏗 Infrastructure as Code
+
+`Terraform` `HCL` `Infrastructure as Code` `State Management` `Automated Provisioning`
+
+## 🐳 Containers
+
+`Docker` `Docker Compose` `Amazon ECR` `Amazon ECS` `AWS Fargate`
+
+## 🌐 Networking
+
+`VPC` `Public Subnets` `Private Subnets` `Route Tables` `Internet Gateway` `Security Groups` `Load Balancing` `DNS`
+
+## 🔐 Security
+
+`AWS IAM` `Security Groups` `Private Networking` `TLS/HTTPS` `ACM` `Cloudflare` `Secure HTTP Headers`
+
+## 🚀 DevOps / CI/CD
+
+`GitHub Actions` `Automated Builds` `Docker Image Publishing` `ECR` `ECS Deployments`
+
+## 📊 Observability / SRE
+
+`AWS CloudWatch` `Grafana` `Application Logs` `Container Logs` `Metrics` `Health Checks` `Troubleshooting`
+
+## 💻 Application
+
+`Python` `FastAPI` `PostgreSQL` `SQLite` `REST APIs`
+
+---
+
+# ⭐ Key Engineering Features
+
+### Infrastructure as Code
+
+Terraform provisions the AWS environment instead of relying on manual console configuration.
+
+### Containerized Application
+
+The FastAPI application is packaged into a Docker image and stored in Amazon ECR.
+
+### Serverless Containers
+
+Amazon ECS with AWS Fargate runs the application without requiring EC2 container hosts.
+
+### Automated CI/CD
+
+GitHub Actions builds and publishes the application image and updates the ECS deployment.
+
+### Immutable Image Deployment
+
+Application images are tagged using the Git commit SHA rather than relying exclusively on a mutable `latest` tag.
+
+Example:
+
+```text
+ads-platform:ba3b0e6095b6a7fbdbc23ebc2c4b207fa9906601
+```
+
+This provides traceability between a deployed container and the source commit that produced it.
+
+### HTTPS
+
+AWS Certificate Manager provides the TLS certificate used by the Application Load Balancer.
+
+### Edge Integration
+
+Cloudflare provides DNS and the external edge layer in front of AWS.
+
+### Private Database
+
+RDS PostgreSQL is deployed without direct public accessibility.
+
+---
+
+# 🏗️ Infrastructure as Code — Terraform
+
+Terraform manages the AWS infrastructure required by the platform.
+
+Resources include:
+
+* VPC
 * Public subnets
 * Private subnets
 * Route tables
 * Internet Gateway
 * Security groups
-* Application-to-database network controls
-* Load balancer networking
-* Private database connectivity
+* IAM roles
+* ECS cluster
+* ECS service
+* Fargate task definition
+* ECR repository
+* Application Load Balancer
+* Target group
+* HTTP listener
+* HTTPS listener
+* ACM certificate
+* RDS PostgreSQL
+* CloudWatch log group
 
-The design demonstrates core cloud networking concepts including:
-
-**routing → subnet segmentation → security boundaries → application connectivity**
-
-This is particularly relevant to cloud/network engineering roles where application infrastructure and traditional networking intersect.
-
----
-
-# 🐳 Docker Containerization
-
-The FastAPI application is packaged into a **Docker container**.
-
-Containerization provides:
-
-* Consistent runtime environments
-* Portable deployments
-* Reproducible builds
-* Dependency isolation
-* Simplified application delivery
-
-The resulting container image is stored in **Amazon ECR** before being deployed through ECS/Fargate.
+Terraform provides:
 
 ```text
-Application Source
-        │
-        ▼
-   Docker Build
-        │
-        ▼
- Container Image
-        │
-        ▼
-   Amazon ECR
-        │
-        ▼
- Amazon ECS/Fargate
+Version Control
+      │
+      ├── Reproducibility
+      ├── Auditability
+      ├── Automation
+      ├── Consistency
+      └── Change Tracking
 ```
 
 ---
 
-# ⚙️ Amazon ECS + AWS Fargate
+# 🌎 Portable AWS Deployment
 
-The application is deployed using **Amazon ECS with AWS Fargate**.
+This project is intentionally designed so that another engineer can deploy the infrastructure into **their own AWS account**.
 
-Fargate provides serverless container compute, allowing the application to run without manually managing EC2 container hosts.
+The repository does not require Ryan's AWS account to function.
 
-ECS manages:
+Account-specific values are supplied at deployment time.
 
-* Task definitions
-* Container lifecycle
-* Service management
-* Desired task count
-* Health checks
-* Deployment orchestration
+### Not hardcoded
 
-This architecture demonstrates practical experience deploying containerized workloads using AWS-native orchestration.
+The project avoids committing:
 
----
+* AWS access keys
+* AWS secret keys
+* Database passwords
+* Terraform state
+* Personal `terraform.tfvars`
+* AWS account-specific ECR registry configuration
+* Personal Cloudflare credentials
+* Personal domain credentials
 
-# ⚖️ Application Load Balancer
-
-An **AWS Application Load Balancer** provides the application entry point within AWS.
-
-The ALB:
-
-* Receives application traffic
-* Routes requests to ECS tasks
-* Performs health checks
-* Provides a stable application endpoint
-* Decouples external traffic from individual containers
-
-Traffic is forwarded to the FastAPI application running on port `8000`.
-
----
-
-# 🗄️ Amazon RDS PostgreSQL
-
-Application data is persisted using **Amazon RDS PostgreSQL**.
-
-The database is designed to remain isolated from direct public access and communicates with the application through controlled AWS networking and security-group rules.
-
-This demonstrates:
-
-* Managed relational database infrastructure
-* PostgreSQL deployment on AWS
-* Private database networking
-* Security-group based access control
-* Application-to-database connectivity
-* Cloud database architecture
-
----
-
-# 🔐 Cloud Security
-
-Security is incorporated throughout the architecture.
-
-The project demonstrates:
-
-* AWS IAM
-* Least-privilege access principles
-* Security groups
-* Private database networking
-* Network segmentation
-* TLS/HTTPS
-* Secure HTTP headers
-* Environment-based configuration
-* Cloudflare edge protection
-* Restricted application/database communication
-
-The objective is to reduce unnecessary exposure while maintaining the connectivity required by the application.
-
----
-
-# 📊 Observability & SRE
-
-The platform incorporates monitoring and operational visibility using **AWS CloudWatch and Grafana**.
-
-### AWS CloudWatch
-
-CloudWatch provides visibility into:
-
-* Application logs
-* Container logs
-* Infrastructure metrics
-* Application behavior
-* Operational troubleshooting
-
-### Grafana
-
-Grafana provides an additional visualization layer for monitoring application and infrastructure behavior.
-
-The operational workflow follows a practical SRE model:
+### Configuration model
 
 ```text
-Deploy
-  │
-  ▼
-Monitor
-  │
-  ▼
-Detect
-  │
-  ▼
-Troubleshoot
-  │
-  ▼
-Improve
+GitHub Repository
+       │
+       ▼
+Terraform Configuration
+       │
+       ├── AWS Region
+       ├── Database Password
+       └── Domain Name
+               │
+               ▼
+        User's AWS Account
+               │
+               ▼
+       User's AWS Resources
 ```
+
+This allows the same Terraform codebase to be deployed into different AWS accounts.
 
 ---
 
-# 🔄 CI/CD with GitHub Actions
+# 🔐 Configuration
 
-The project uses **GitHub Actions** to automate the application delivery workflow.
+Create a local Terraform variables file from the example:
+
+```bash
+cp terraform.tfvars.example terraform.tfvars
+```
+
+Example:
+
+```hcl
+aws_region  = "us-east-1"
+db_password = "CHANGE_ME_TO_A_STRONG_PASSWORD"
+domain_name = "example.com"
+```
+
+### Important
+
+`terraform.tfvars` should **never be committed to Git**.
+
+The repository's `.gitignore` excludes:
+
+```text
+terraform.tfvars
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+```
+
+The repository contains:
+
+```text
+terraform.tfvars.example
+```
+
+as a safe configuration template.
+
+---
+
+# 🔑 GitHub Actions Secrets
+
+The CI/CD workflow requires AWS credentials to deploy the application.
+
+Configure the following GitHub repository secrets:
+
+```text
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+```
+
+These credentials should belong to an AWS IAM principal with only the permissions required by the deployment workflow.
+
+Do **not** commit AWS credentials into the repository.
+
+The ECR registry itself does not need to be hardcoded as a secret. GitHub Actions obtains the registry endpoint from the ECR login action:
+
+```yaml
+${{ steps.login-ecr.outputs.registry }}
+```
+
+This allows the same workflow to work with different AWS accounts.
+
+---
+
+# 🔄 CI/CD Architecture
+
+Every push to `main` can trigger the deployment workflow.
 
 ```text
 Developer
     │
     ▼
-Git Push / Pull Request
+Git Push
     │
     ▼
 GitHub Actions
     │
-    ├── Build
-    ├── Test
-    ├── Docker Build
-    ├── Image Push
+    ├── Checkout
     │
-    ▼
-Amazon ECR
+    ├── Configure AWS Credentials
     │
-    ▼
-Amazon ECS
+    ├── Authenticate with ECR
     │
-    ▼
-AWS Fargate
+    ├── Build Docker Image
     │
-    ▼
-Application Load Balancer
+    ├── Tag Image with Git SHA
     │
-    ▼
-Production Application
+    ├── Push Image to ECR
+    │
+    ├── Retrieve ECS Task Definition
+    │
+    ├── Replace Container Image
+    │
+    ├── Register New Task Definition
+    │
+    └── Update ECS Service
+             │
+             ▼
+        Amazon ECS
+             │
+             ▼
+         Fargate
+             │
+             ▼
+            ALB
+             │
+             ▼
+       Production App
 ```
 
-This creates a repeatable path from source code to deployed infrastructure while reducing unnecessary manual deployment steps.
+---
+
+# 📦 ECR Image Strategy
+
+The ECR repository is created by Terraform.
+
+The CI/CD pipeline then publishes application images using the Git commit SHA.
+
+Example:
+
+```text
+302303422904.dkr.ecr.us-east-1.amazonaws.com/ads-platform:<git-sha>
+```
+
+This is preferable to relying solely on:
+
+```text
+:latest
+```
+
+because each deployed image can be traced back to a specific source revision.
+
+Example:
+
+```text
+Git Commit
+     │
+     ▼
+ba3b0e6095b6...
+     │
+     ▼
+Docker Image
+     │
+     ▼
+ECR
+     │
+     ▼
+ECS Task Definition Revision
+     │
+     ▼
+Fargate Deployment
+```
 
 ---
 
-# 🌎 Cloudflare Integration
-
-**Cloudflare** provides the edge layer in front of the AWS environment.
-
-The integration demonstrates:
-
-* DNS
-* TLS/SSL
-* HTTPS
-* Edge traffic management
-* CDN capabilities
-* Caching
-* Additional protection between users and AWS
-
-The resulting architecture separates **edge services from application infrastructure**.
-
----
-
-# 🛠️ Engineering & Troubleshooting
-
-A major objective of this project is demonstrating the ability to troubleshoot across multiple layers of a cloud environment.
-
-Potential troubleshooting domains include:
-
-### Application Layer
-
-* FastAPI application errors
-* API connectivity
-* Application ports
-* Environment configuration
-
-### Container Layer
-
-* Docker builds
-* Container startup failures
-* ECS task failures
-* Image availability
-* Container health checks
-
-### Networking Layer
-
-* VPC routing
-* Subnet connectivity
-* Security groups
-* ALB target connectivity
-* Application-to-database communication
-
-### AWS Infrastructure
-
-* IAM permissions
-* ECS service configuration
-* ECR image deployment
-* RDS connectivity
-* CloudWatch logs and metrics
-
-This demonstrates a **full-stack infrastructure troubleshooting mindset**, rather than focusing exclusively on a single layer.
-
----
-
-# 🚀 Deployment
+# 🚀 Deployment Guide
 
 ## Prerequisites
 
@@ -420,94 +471,700 @@ Install:
 * Docker
 * Git
 * Python
-* AWS account
+* An AWS account
+* A domain if HTTPS/Cloudflare deployment is desired
 
-Configure AWS credentials:
+Verify installations:
+
+```bash
+aws --version
+terraform version
+docker --version
+git --version
+python --version
+```
+
+---
+
+# 1. Clone the Repository
+
+```bash
+git clone https://github.com/CloudTechs-ai/Ads-Platform.git
+cd Ads-Platform
+```
+
+---
+
+# 2. Configure AWS Credentials
+
+Configure the AWS CLI:
 
 ```bash
 aws configure
 ```
 
----
-
-# 📥 Clone the Repository
+Verify access:
 
 ```bash
-git clone https://github.com/CloudTechs-ai/Ads-Platform.git
-cd Ads-Platform/terraform/aws
+aws sts get-caller-identity
+```
+
+The command should return the AWS account and IAM identity being used.
+
+---
+
+# 3. Configure Terraform
+
+Navigate to the Terraform directory:
+
+```bash
+cd terraform/aws
+```
+
+Create the local variables file:
+
+```bash
+cp terraform.tfvars.example terraform.tfvars
+```
+
+Edit:
+
+```bash
+nano terraform.tfvars
+```
+
+or use your preferred editor.
+
+Example:
+
+```hcl
+aws_region  = "us-east-1"
+db_password = "USE_A_STRONG_UNIQUE_PASSWORD"
+domain_name = "example.com"
 ```
 
 ---
 
-# 🏗 Deploy Infrastructure
-
-Initialize Terraform:
+# 4. Initialize Terraform
 
 ```bash
 terraform init
 ```
 
-Review the planned infrastructure:
+---
+
+# 5. Validate the Configuration
+
+```bash
+terraform validate
+```
+
+Expected result:
+
+```text
+Success! The configuration is valid.
+```
+
+---
+
+# 6. Review Infrastructure
 
 ```bash
 terraform plan
 ```
 
-Deploy:
+Review the resources Terraform intends to create.
+
+---
+
+# 7. Provision AWS Infrastructure
 
 ```bash
 terraform apply
 ```
 
+Confirm the deployment when prompted.
+
+Terraform will provision the AWS infrastructure including:
+
+```text
+VPC
+├── Public Subnets
+├── Private Subnets
+├── Route Tables
+├── Internet Gateway
+└── Security Groups
+
+ECS
+├── Cluster
+├── Task Definition
+└── Service
+
+ECR
+└── Repository
+
+Load Balancing
+├── ALB
+├── Target Group
+├── HTTP Listener
+└── HTTPS Listener
+
+Database
+└── RDS PostgreSQL
+
+Observability
+└── CloudWatch Logs
+```
+
 ---
 
-# 🐳 Build the Application
+# 8. Configure DNS
 
-Build the Docker image:
+If using your own domain, point the domain to the AWS Application Load Balancer.
+
+Example Cloudflare record:
+
+```text
+Type:   CNAME
+Name:   @
+Target: <your-alb-dns-name>
+```
+
+Example:
+
+```text
+adsplatform.dev
+        ↓
+ads-platform-alb-xxxxxxxx.us-east-1.elb.amazonaws.com
+```
+
+For Cloudflare proxying:
+
+```text
+Cloudflare
+   ↓
+AWS ALB
+```
+
+The ACM validation record must remain available so AWS Certificate Manager can validate domain ownership.
+
+---
+
+# 9. ACM Certificate Validation
+
+Terraform creates the ACM certificate.
+
+AWS provides a DNS validation CNAME.
+
+Add the provided ACM validation record to your DNS provider.
+
+The validation record should remain present until ACM reports the certificate as:
+
+```text
+ISSUED
+```
+
+Do not confuse the ACM validation CNAME with the application CNAME.
+
+### Application DNS
+
+```text
+adsplatform.dev
+      ↓
+AWS ALB
+```
+
+### ACM validation
+
+```text
+_acm-validation-record
+      ↓
+AWS ACM
+```
+
+They serve different purposes.
+
+---
+
+# 10. GitHub Actions Deployment
+
+Once the infrastructure exists:
+
+1. Push the repository to GitHub.
+2. Configure:
+
+```text
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+```
+
+3. Push to `main`.
+
+GitHub Actions will:
+
+```text
+Build Docker Image
+       ↓
+Authenticate with ECR
+       ↓
+Push Image
+       ↓
+Create New ECS Task Definition Revision
+       ↓
+Update ECS Service
+       ↓
+Deploy Fargate Task
+```
+
+---
+
+# 🐳 Local Docker Deployment
+
+The application can also be tested locally.
+
+From the application directory containing the Dockerfile:
 
 ```bash
 docker build -t ads-platform .
 ```
 
-Run locally:
+Run:
 
 ```bash
 docker run -p 8000:8000 ads-platform
 ```
 
-Application:
+Test:
 
 ```text
 http://localhost:8000
 ```
 
----
-
-# 🌐 Production Architecture
-
-The production-style request path is:
+The container is configured to listen on:
 
 ```text
-User
- │
- ▼
-Cloudflare
- │
- ▼
-AWS Application Load Balancer
- │
- ▼
-Amazon ECS
- │
- ▼
-AWS Fargate
- │
- ▼
-FastAPI Application
- │
- ▼
-Amazon RDS PostgreSQL
+0.0.0.0:8000
 ```
+
+---
+
+# ⚙️ ECS/Fargate
+
+The application runs as an ECS service using AWS Fargate.
+
+ECS manages:
+
+* Desired task count
+* Task lifecycle
+* Container deployment
+* Task definitions
+* Service scheduling
+* Load balancer integration
+* Health checks
+
+The deployment model is:
+
+```text
+ECS Service
+     │
+     ▼
+Fargate Task
+     │
+     ▼
+FastAPI Container
+     │
+     ▼
+Port 8000
+```
+
+---
+
+# ⚖️ Application Load Balancer
+
+The Application Load Balancer provides the external AWS application endpoint.
+
+Configuration includes:
+
+```text
+HTTP :80
+   │
+   └── Redirect → HTTPS :443
+
+HTTPS :443
+   │
+   ▼
+Target Group
+   │
+   ▼
+ECS/Fargate :8000
+```
+
+The target group performs health checks against the application.
+
+A healthy ECS task becomes registered with the target group automatically.
+
+---
+
+# 🗄️ Amazon RDS PostgreSQL
+
+The application uses Amazon RDS PostgreSQL for persistent data.
+
+The database is configured as a private resource.
+
+Security-group rules restrict access to approved application traffic.
+
+Conceptually:
+
+```text
+Internet
+   X
+   │
+   │ No direct database access
+   │
+   ▼
+ECS/Fargate
+   │
+   │ TCP 5432
+   ▼
+RDS PostgreSQL
+```
+
+This reduces unnecessary public exposure of the database.
+
+---
+
+# 🔐 Security Architecture
+
+Security is incorporated across multiple layers.
+
+### Identity
+
+* AWS IAM
+* IAM execution roles
+* GitHub Actions AWS credentials
+* Least-privilege design
+
+### Network
+
+* VPC segmentation
+* Security groups
+* Private database networking
+* Restricted application ports
+
+### Transport
+
+* HTTPS
+* ACM certificates
+* TLS termination at the ALB
+* Cloudflare edge integration
+
+### Application
+
+* Environment-based configuration
+* Database credentials supplied through configuration
+* Secure HTTP headers
+* No secrets committed to Git
+
+---
+
+# 📊 Observability
+
+## CloudWatch
+
+ECS container logs are sent to CloudWatch.
+
+Example log group:
+
+```text
+/ecs/ads-platform
+```
+
+CloudWatch can be used to investigate:
+
+* Application errors
+* Container startup failures
+* ECS deployment issues
+* Runtime behavior
+* Operational events
+
+## Grafana
+
+Grafana provides an additional visualization and observability layer for application and infrastructure metrics.
+
+Operational workflow:
+
+```text
+Deploy
+  ↓
+Monitor
+  ↓
+Detect
+  ↓
+Investigate
+  ↓
+Troubleshoot
+  ↓
+Improve
+```
+
+---
+
+# 🛠️ Troubleshooting Guide
+
+One of the primary goals of this project is demonstrating troubleshooting across multiple infrastructure layers.
+
+## Check ECS Service
+
+```bash
+aws ecs describe-services \
+  --cluster ads-platform-cluster \
+  --services ads-platform-service \
+  --region us-east-1
+```
+
+Look for:
+
+```text
+desiredCount
+runningCount
+pendingCount
+events
+```
+
+---
+
+## Check ECS Tasks
+
+```bash
+aws ecs list-tasks \
+  --cluster ads-platform-cluster \
+  --service-name ads-platform-service \
+  --region us-east-1
+```
+
+Then inspect the task:
+
+```bash
+aws ecs describe-tasks \
+  --cluster ads-platform-cluster \
+  --tasks <TASK_ARN> \
+  --region us-east-1
+```
+
+Check:
+
+```text
+lastStatus
+desiredStatus
+stoppedReason
+containers
+exitCode
+```
+
+---
+
+## Check ECR
+
+```bash
+aws ecr describe-images \
+  --repository-name ads-platform \
+  --region us-east-1
+```
+
+Confirm that the expected Git SHA image exists.
+
+---
+
+## Check ALB Target Health
+
+```bash
+aws elbv2 describe-target-health \
+  --target-group-arn <TARGET_GROUP_ARN> \
+  --region us-east-1
+```
+
+Expected:
+
+```text
+healthy
+```
+
+If there are zero targets, investigate the ECS service and running tasks first.
+
+---
+
+## Check CloudWatch Logs
+
+Retrieve the ECS logs through the AWS Console or CLI to identify application/container startup problems.
+
+Common issues include:
+
+* Incorrect environment variables
+* Container startup errors
+* Missing images
+* Database connectivity
+* Security-group rules
+* Incorrect listener configuration
+* ECS task definition errors
+
+---
+
+# 🌐 Cloudflare
+
+Cloudflare provides the external DNS and edge layer.
+
+The intended architecture is:
+
+```text
+Client
+   ↓
+Cloudflare
+   ↓
+AWS ALB
+   ↓
+ECS/Fargate
+```
+
+Cloudflare can provide:
+
+* DNS
+* TLS/SSL
+* CDN capabilities
+* Caching
+* Edge traffic management
+* Additional protection
+
+When using Cloudflare with an AWS ALB, ensure the DNS record points to the **current ALB DNS name**.
+
+If Terraform recreates the ALB, its DNS name may change.
+
+---
+
+# 🔄 Infrastructure vs Application Deployment
+
+The project intentionally separates infrastructure provisioning from application deployment.
+
+## Terraform manages infrastructure
+
+```text
+Terraform
+   ├── VPC
+   ├── Networking
+   ├── Security Groups
+   ├── IAM
+   ├── ECR
+   ├── ECS
+   ├── ALB
+   ├── ACM
+   ├── RDS
+   └── CloudWatch
+```
+
+## GitHub Actions manages application delivery
+
+```text
+GitHub Actions
+   ├── Docker Build
+   ├── ECR Push
+   ├── Task Definition Revision
+   └── ECS Deployment
+```
+
+This separation allows infrastructure and application releases to evolve independently.
+
+---
+
+# 🔁 Clone → Configure → Deploy
+
+The intended developer experience is:
+
+```text
+1. Clone Repository
+        ↓
+2. Configure AWS Credentials
+        ↓
+3. Configure terraform.tfvars
+        ↓
+4. terraform init
+        ↓
+5. terraform validate
+        ↓
+6. terraform plan
+        ↓
+7. terraform apply
+        ↓
+8. Configure DNS / ACM
+        ↓
+9. Configure GitHub Secrets
+        ↓
+10. Push to main
+        ↓
+11. GitHub Actions Builds Image
+        ↓
+12. Image → ECR
+        ↓
+13. ECS Deployment
+        ↓
+14. ALB Health Check
+        ↓
+15. HTTPS Application
+```
+
+The repository is designed so that another engineer can perform this workflow using their own AWS account and domain.
+
+---
+
+# 💰 Cost Considerations
+
+This project uses AWS services that can generate charges.
+
+Potential cost sources include:
+
+* Amazon RDS
+* ECS/Fargate
+* Application Load Balancer
+* NAT Gateway, if configured
+* ECR storage
+* CloudWatch logs
+* Data transfer
+
+For experimentation, monitor AWS billing closely.
+
+When the environment is no longer needed:
+
+```bash
+terraform destroy
+```
+
+Review the Terraform plan carefully before confirming destruction.
+
+---
+
+# 🛡️ Production Considerations
+
+This is a production-style engineering demonstration, but a real enterprise production environment would typically require additional controls.
+
+Examples include:
+
+* AWS WAF
+* AWS Secrets Manager
+* KMS encryption
+* Centralized IAM/SSO
+* Remote Terraform state
+* State locking
+* Multi-AZ architecture
+* Automated backups
+* Disaster recovery
+* Container vulnerability scanning
+* Image signing
+* Automated security testing
+* Blue/green deployments
+* Deployment approvals
+* Autoscaling
+* Centralized SIEM
+* Incident response procedures
+
+These represent areas for continued development rather than assumptions that every control is already implemented.
 
 ---
 
@@ -517,6 +1174,7 @@ Potential next-stage improvements include:
 
 * ☸️ Amazon EKS migration
 * 🔐 AWS WAF
+* 🔑 AWS Secrets Manager
 * 🌐 Route 53 integration
 * 🔄 Blue/green deployments
 * 📦 Reusable Terraform modules
@@ -531,16 +1189,58 @@ Potential next-stage improvements include:
 * 🔗 Site-to-Site VPN
 * 🧪 Automated infrastructure testing
 * 🛡️ Centralized SIEM integration
+* 🔒 OIDC-based GitHub Actions authentication
+* 📦 ECR lifecycle policies
+* 🧪 Automated application testing
+* 🚦 Deployment approval gates
+
+---
+
+# 🧠 Engineering Lessons Demonstrated
+
+This project goes beyond simply provisioning AWS resources.
+
+It demonstrates the ability to reason across multiple infrastructure layers:
+
+```text
+Application
+     ↓
+Container
+     ↓
+ECS
+     ↓
+Load Balancer
+     ↓
+Networking
+     ↓
+Security Groups
+     ↓
+DNS
+     ↓
+Cloudflare
+     ↓
+Internet
+```
+
+Troubleshooting therefore requires understanding how those layers interact.
+
+Examples include:
+
+* Diagnosing ECS task startup failures
+* Validating ECR image availability
+* Troubleshooting ALB target registration
+* Resolving ACM certificate validation
+* Debugging DNS records
+* Identifying Cloudflare origin errors
+* Verifying security-group connectivity
+* Tracing application-to-database communication
+* Diagnosing CI/CD deployment failures
 
 ---
 
 # 💼 What This Project Demonstrates to Employers
 
-This project is intended to demonstrate hands-on ability across the modern cloud engineering lifecycle:
-
-**Design → Provision → Secure → Containerize → Deploy → Monitor → Troubleshoot → Automate**
-
-Specifically:
+This project demonstrates hands-on experience across the modern cloud engineering lifecycle.
 
 | Engineering Area       | Demonstrated Technologies              |
 | ---------------------- | -------------------------------------- |
@@ -548,14 +1248,70 @@ Specifically:
 | Infrastructure as Code | Terraform                              |
 | Networking             | VPC, Subnets, Routing, Security Groups |
 | Containers             | Docker, ECS, Fargate                   |
+| Container Registry     | Amazon ECR                             |
 | Databases              | RDS PostgreSQL                         |
 | Load Balancing         | Application Load Balancer              |
-| Security               | IAM, Security Groups, TLS, Cloudflare  |
+| Security               | IAM, Security Groups, TLS, ACM         |
+| Edge                   | Cloudflare                             |
 | CI/CD                  | GitHub Actions                         |
 | Observability          | CloudWatch, Grafana                    |
 | Application            | Python, FastAPI                        |
-| Edge                   | Cloudflare                             |
 | Operations             | Monitoring, Logging, Troubleshooting   |
+| Automation             | Terraform + GitHub Actions             |
+
+The project demonstrates:
+
+**Design → Provision → Secure → Containerize → Deploy → Monitor → Troubleshoot → Automate**
+
+---
+
+# 🧑‍💻 Skills Demonstrated
+
+### Cloud Engineering
+
+* AWS architecture
+* ECS/Fargate
+* ECR
+* RDS
+* ALB
+* CloudWatch
+* ACM
+
+### Cloud Networking
+
+* VPC design
+* Public/private subnet architecture
+* Routing
+* Security groups
+* Load balancing
+* DNS
+* Application-to-database connectivity
+
+### Infrastructure Automation
+
+* Terraform
+* HCL
+* Infrastructure as Code
+* Repeatable provisioning
+* Configuration management
+
+### DevOps
+
+* Docker
+* GitHub Actions
+* CI/CD
+* Automated image publishing
+* Automated ECS deployments
+
+### Operations / SRE
+
+* Logging
+* Monitoring
+* Health checks
+* Deployment troubleshooting
+* Container troubleshooting
+* Network troubleshooting
+* Cloud infrastructure troubleshooting
 
 ---
 
@@ -567,6 +1323,8 @@ Building practical cloud infrastructure with a focus on:
 
 **AWS • Terraform • Kubernetes • Infrastructure Automation • SRE • Cloud Networking • Platform Engineering**
 
-## 📜 License
+---
 
-This project is provided for educational and demonstration purposes.
+# 📜 License
+
+This project is provided for educational, portfolio, and demonstration purposes.
