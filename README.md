@@ -567,20 +567,6 @@ Building practical cloud infrastructure with a focus on:
 
 **AWS • Terraform • Kubernetes • Infrastructure Automation • SRE • Cloud Networking • Platform Engineering**
 
----
-
-## 📜 Certifications
-
-![Terraform](https://private-user-images.githubusercontent.com/295695252/639167150-287a120a-dbe0-441a-a54f-9afe063723ed.png)
-
-![AWS Solutions Architect](https://private-user-images.githubusercontent.com/295695252/639167933-283c46d6-084e-473b-859f-f8d8a7515ce3.png)
-
-![CCNA](https://private-user-images.githubusercontent.com/295695252/639168462-0670cbcc-0b0a-4c1d-9838-8d42ae0a0cb4.png)
-
-![CompTIA Security+](https://private-user-images.githubusercontent.com/295695252/639169781-76bb47c2-925a-4250-a6a3-ae5cf1859012.png)
-
----
-
 ## 📜 License
 
 This project is provided for educational and demonstration purposes.
