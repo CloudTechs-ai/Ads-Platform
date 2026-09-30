@@ -9,3 +9,7 @@ __pycache__/
 *.tfstate.backup
 /aws/
 terraform.tfvars
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan

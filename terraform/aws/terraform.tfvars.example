@@ -1,0 +1,3 @@
+aws_region  = "us-east-1"
+db_password = "Use-A-Strong-Password-Here"
+domain_name = "their-domain.com"
