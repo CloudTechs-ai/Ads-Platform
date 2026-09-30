@@ -1,326 +1,410 @@
-Ads Platform — AWS Web App Deployment with Terraform + Docker
+# ☁️ CloudTechs Ads Platform — AWS Cloud-Native Deployment
 
-📌 Overview
-This project demonstrates the deployment of a full Ads Platform web application to AWS using Terraform, Docker, AWS CloudWatch, and Cloudflare. It highlights infrastructure automation, containerization, monitoring, and edge performance optimization. A production-style cloud deployment of a Python/FastAPI web application on AWS, designed to demonstrate cloud infrastructure engineering, infrastructure as code, container orchestration, networking, observability, security, and automated deployments.
+[![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws)](#) [![Terraform](https://img.shields.io/badge/Terraform-Infrastructure%20as%20Code-7B42BC?logo=terraform)](#) [![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?logo=docker)](#) [![ECS](https://img.shields.io/badge/Amazon%20ECS-Fargate-FF9900?logo=amazon-aws)](#) [![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?logo=python)](#) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-RDS-4169E1?logo=postgresql)](#) [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=github)](#) [![Cloudflare](https://img.shields.io/badge/Cloudflare-Edge%20Security-F38020?logo=cloudflare)](#) [![Grafana](https://img.shields.io/badge/Grafana-Observability-F46800?logo=grafana)](#)
 
-The project provisions the entire AWS environment with Terraform, packages the application with Docker, deploys containers through Amazon ECS/Fargate, stores application data in Amazon RDS PostgreSQL, and exposes the application through an Application Load Balancer and Cloudflare.
+> **A production-style AWS cloud engineering project demonstrating Infrastructure as Code, containerization, cloud networking, security, observability, CI/CD, and scalable application deployment.**
 
-The goal is to demonstrate how a modern cloud engineering team can take an application from source code to a repeatable, secure, observable, and scalable AWS deployment without manually configuring infrastructure through the AWS console.
+This project deploys a **Python/FastAPI web application to AWS** using **Terraform, Docker, Amazon ECS/Fargate, Amazon RDS PostgreSQL, Application Load Balancer, CloudWatch, Grafana, GitHub Actions, and Cloudflare**.
 
+The environment is designed to demonstrate how a cloud engineer can take an application from **source code → infrastructure → container image → automated deployment → production-style AWS architecture** using repeatable Infrastructure as Code rather than manually configuring resources through the AWS Console.
+
+---
+
+# 🏴 Technology Stack
+
+### ☁️ Cloud
+
+`AWS` `VPC` `ECS` `Fargate` `ECR` `RDS PostgreSQL` `ALB` `IAM` `CloudWatch`
+
+### 🏗 Infrastructure as Code
+
+`Terraform` `HCL` `Infrastructure as Code` `State Management` `Automated Provisioning`
+
+### 🐳 Containers
+
+`Docker` `Docker Compose` `Amazon ECR` `Amazon ECS` `AWS Fargate`
+
+### 🌐 Networking
+
+`VPC` `Public Subnets` `Private Subnets` `Route Tables` `Internet Gateway` `Security Groups` `Load Balancing` `DNS`
+
+### 🔐 Security
+
+`AWS IAM` `Least Privilege` `Security Groups` `Private Networking` `TLS/HTTPS` `Cloudflare` `Secure HTTP Headers`
+
+### 🚀 DevOps / CI/CD
+
+`GitHub Actions` `CI/CD` `Automated Builds` `Docker Image Publishing` `ECR` `ECS Deployments`
+
+### 📊 Observability / SRE
+
+`AWS CloudWatch` `Grafana` `Application Logs` `Container Logs` `Metrics` `Health Checks` `Troubleshooting`
+
+### 💻 Application
+
+`Python` `FastAPI` `PostgreSQL` `SQLite` `REST APIs`
+
+---
+
+# 🎯 Project Highlights
+
+This project demonstrates practical experience with:
+
+* ☁️ **AWS cloud architecture**
+* 🏗 **Terraform Infrastructure as Code**
+* 🐳 **Docker containerization**
+* ⚙️ **Amazon ECS/Fargate**
+* 🌐 **AWS VPC networking**
+* 🔐 **IAM and network security**
+* 🗄️ **Amazon RDS PostgreSQL**
+* ⚖️ **Application Load Balancing**
+* 📊 **CloudWatch observability**
+* 📈 **Grafana monitoring**
+* 🔄 **GitHub Actions CI/CD**
+* 🌎 **Cloudflare edge integration**
+* 🛠️ **Multi-layer cloud troubleshooting**
+* 🚀 **Automated infrastructure provisioning**
+
+---
 
 🏗 Architecture
 <img width="1060" height="537" alt="image (5)" src="https://github.com/user-attachments/assets/dbe4fb75-9709-4047-95a9-460abad8afdb" />
 
+### Request Flow
 
-# CloudTechs Ads Platform — AWS Cloud-Native Deployment
+```text
+                         Internet
+                            │
+                            ▼
+                     ┌──────────────┐
+                     │  Cloudflare  │
+                     │ DNS / Edge   │
+                     └──────┬───────┘
+                            │
+                            ▼
+                  ┌────────────────────┐
+                  │ Application Load   │
+                  │ Balancer           │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │    AWS ECS          │
+                 │     Fargate         │
+                 │                     │
+                 │  FastAPI Container  │
+                 └─────────┬───────────┘
+                           │
+                           ▼
+                 ┌─────────────────────┐
+                 │   Amazon RDS        │
+                 │   PostgreSQL        │
+                 └─────────────────────┘
+```
 
-A production-style cloud deployment of a Python/FastAPI web application on AWS, designed to demonstrate **cloud infrastructure engineering, infrastructure as code, container orchestration, networking, observability, security, and automated deployments**.
-
-The project provisions the entire AWS environment with **Terraform**, packages the application with **Docker**, deploys containers through **Amazon ECS/Fargate**, stores application data in **Amazon RDS PostgreSQL**, and exposes the application through an **Application Load Balancer and Cloudflare**.
-
-The goal is to demonstrate how a modern cloud engineering team can take an application from source code to a repeatable, secure, observable, and scalable AWS deployment without manually configuring infrastructure through the AWS console.
-
-# 🚀 What This Project Demonstrates
-
-This project simulates a real-world application platform rather than simply deploying a web server.
-
-### Infrastructure as Code
-
-The AWS environment is provisioned using **Terraform**, allowing infrastructure to be:
-
-* Version controlled
-* Reproducible
-* Auditable
-* Consistently deployed
-* Modified without relying on manual AWS Console configuration
-
-Terraform manages the core infrastructure including:
-
-* VPC
-* Subnets
-* Route tables
-* Internet Gateway
-* Security groups
-* IAM
-* ECS
-* Fargate
-* Application Load Balancer
-* ECR
-* RDS
-* CloudWatch
+Terraform provisions the underlying AWS infrastructure and establishes the networking, security, compute, database, load-balancing, and observability components required by the application.
 
 ---
 
-# ☁️ AWS Architecture
+# 🏗 Infrastructure as Code — Terraform
 
-## VPC & Networking
+The AWS environment is provisioned using **Terraform**.
 
-The application is deployed inside a dedicated AWS VPC with segmented networking designed to separate internet-facing infrastructure from application and database workloads.
+Instead of manually creating resources through the AWS Console, infrastructure is represented as version-controlled configuration.
 
-The architecture uses:
+Terraform manages resources including:
+
+* VPC
+* Public and private subnets
+* Route tables
+* Internet Gateway
+* Security groups
+* IAM resources
+* ECS clusters
+* ECS services
+* Fargate tasks
+* ECR repositories
+* Application Load Balancer
+* Target groups
+* RDS PostgreSQL
+* CloudWatch resources
+
+### Engineering Benefits
+
+```text
+Terraform
+    │
+    ├── Version Controlled
+    ├── Reproducible
+    ├── Auditable
+    ├── Automated
+    └── Consistent
+```
+
+This makes the environment easier to reproduce, modify, review, and troubleshoot.
+
+---
+
+# ☁️ AWS VPC & Networking
+
+The application runs inside a dedicated **AWS VPC** with network segmentation between internet-facing infrastructure and backend workloads.
+
+The architecture incorporates:
 
 * Public subnets
 * Private subnets
 * Route tables
 * Internet Gateway
 * Security groups
-* Controlled application-to-database communication
+* Application-to-database network controls
+* Load balancer networking
+* Private database connectivity
 
-The design demonstrates fundamental AWS networking concepts including routing, subnet isolation, security boundaries, and container-to-database connectivity.
+The design demonstrates core cloud networking concepts including:
+
+**routing → subnet segmentation → security boundaries → application connectivity**
+
+This is particularly relevant to cloud/network engineering roles where application infrastructure and traditional networking intersect.
 
 ---
 
-## 🐳 Containerization
+# 🐳 Docker Containerization
 
-The FastAPI application is packaged as a Docker container.
+The FastAPI application is packaged into a **Docker container**.
 
-Docker provides:
+Containerization provides:
 
-* Consistent application environments
+* Consistent runtime environments
 * Portable deployments
-* Repeatable builds
-* Simplified dependency management
-* Isolation between application workloads
+* Reproducible builds
+* Dependency isolation
+* Simplified application delivery
 
-Container images are stored in **Amazon ECR** and deployed to ECS/Fargate.
+The resulting container image is stored in **Amazon ECR** before being deployed through ECS/Fargate.
+
+```text
+Application Source
+        │
+        ▼
+   Docker Build
+        │
+        ▼
+ Container Image
+        │
+        ▼
+   Amazon ECR
+        │
+        ▼
+ Amazon ECS/Fargate
+```
 
 ---
 
-# ⚙️ Amazon ECS + Fargate
+# ⚙️ Amazon ECS + AWS Fargate
 
-The application runs on **Amazon ECS using AWS Fargate**, eliminating the need to manage EC2 instances for the container infrastructure.
+The application is deployed using **Amazon ECS with AWS Fargate**.
 
-ECS handles:
+Fargate provides serverless container compute, allowing the application to run without manually managing EC2 container hosts.
 
-* Container scheduling
-* Task lifecycle management
+ECS manages:
+
+* Task definitions
+* Container lifecycle
 * Service management
+* Desired task count
 * Health checks
 * Deployment orchestration
 
-Fargate provides the compute layer while AWS manages the underlying infrastructure.
-
-The application can therefore be deployed without manually provisioning or maintaining container hosts.
+This architecture demonstrates practical experience deploying containerized workloads using AWS-native orchestration.
 
 ---
 
-# 🌐 Application Load Balancer
+# ⚖️ Application Load Balancer
 
-An **Application Load Balancer** provides the entry point for application traffic inside AWS.
+An **AWS Application Load Balancer** provides the application entry point within AWS.
 
 The ALB:
 
-* Receives HTTP/HTTPS traffic
-* Routes requests to healthy ECS tasks
-* Performs target health checks
-* Provides a scalable application endpoint
-* Separates external traffic from individual containers
+* Receives application traffic
+* Routes requests to ECS tasks
+* Performs health checks
+* Provides a stable application endpoint
+* Decouples external traffic from individual containers
 
-Application traffic is forwarded to the FastAPI application running on port `8000`.
+Traffic is forwarded to the FastAPI application running on port `8000`.
 
 ---
 
 # 🗄️ Amazon RDS PostgreSQL
 
-Persistent application data is stored in **Amazon RDS PostgreSQL**.
+Application data is persisted using **Amazon RDS PostgreSQL**.
 
-The database is isolated from direct public access and communicates with the application through controlled network paths and security-group rules.
+The database is designed to remain isolated from direct public access and communicates with the application through controlled AWS networking and security-group rules.
 
 This demonstrates:
 
-* Managed database infrastructure
-* Private subnet architecture
-* Database security boundaries
+* Managed relational database infrastructure
+* PostgreSQL deployment on AWS
+* Private database networking
+* Security-group based access control
 * Application-to-database connectivity
-* PostgreSQL operations in AWS
+* Cloud database architecture
 
 ---
 
-# 🔐 Security
+# 🔐 Cloud Security
 
-Security is incorporated throughout the architecture rather than added after deployment.
+Security is incorporated throughout the architecture.
 
-The project implements:
+The project demonstrates:
 
 * AWS IAM
+* Least-privilege access principles
 * Security groups
 * Private database networking
 * Network segmentation
 * TLS/HTTPS
 * Secure HTTP headers
 * Environment-based configuration
-* Restricted application/database communication
 * Cloudflare edge protection
-* Least-privilege access principles
+* Restricted application/database communication
 
-The objective is to minimize unnecessary exposure while maintaining required application connectivity.
+The objective is to reduce unnecessary exposure while maintaining the connectivity required by the application.
 
 ---
 
-# 📊 Observability & Reliability
+# 📊 Observability & SRE
 
-The deployment incorporates observability practices commonly used in production environments.
+The platform incorporates monitoring and operational visibility using **AWS CloudWatch and Grafana**.
 
 ### AWS CloudWatch
 
-CloudWatch is used for:
+CloudWatch provides visibility into:
 
 * Application logs
 * Container logs
-* Infrastructure monitoring
-* Metrics
-* Troubleshooting
+* Infrastructure metrics
+* Application behavior
+* Operational troubleshooting
 
 ### Grafana
 
-Grafana is used to provide additional visibility into application and infrastructure behavior.
+Grafana provides an additional visualization layer for monitoring application and infrastructure behavior.
 
-The project demonstrates an SRE-oriented approach to operating infrastructure:
+The operational workflow follows a practical SRE model:
 
-**Deploy → Monitor → Detect → Troubleshoot → Improve**
+```text
+Deploy
+  │
+  ▼
+Monitor
+  │
+  ▼
+Detect
+  │
+  ▼
+Troubleshoot
+  │
+  ▼
+Improve
+```
 
 ---
 
-# 🔄 CI/CD
+# 🔄 CI/CD with GitHub Actions
 
-The project integrates **GitHub Actions** to automate application deployment workflows.
-
-The pipeline supports:
+The project uses **GitHub Actions** to automate the application delivery workflow.
 
 ```text
 Developer
-   │
-   ▼
+    │
+    ▼
 Git Push / Pull Request
-   │
-   ▼
+    │
+    ▼
 GitHub Actions
-   │
-   ├── Build
-   ├── Test
-   ├── Docker Image
-   ├── Push to Amazon ECR
-   │
-   ▼
+    │
+    ├── Build
+    ├── Test
+    ├── Docker Build
+    ├── Image Push
+    │
+    ▼
+Amazon ECR
+    │
+    ▼
 Amazon ECS
-   │
-   ▼
-Fargate Deployment
-   │
-   ▼
+    │
+    ▼
+AWS Fargate
+    │
+    ▼
 Application Load Balancer
+    │
+    ▼
+Production Application
 ```
 
-This removes unnecessary manual deployment steps and provides a repeatable path from source code to running infrastructure.
+This creates a repeatable path from source code to deployed infrastructure while reducing unnecessary manual deployment steps.
 
 ---
 
 # 🌎 Cloudflare Integration
 
-Cloudflare sits at the edge of the application and provides:
+**Cloudflare** provides the edge layer in front of the AWS environment.
 
-* DNS
-* TLS/SSL
-* CDN capabilities
-* Edge caching
-* Traffic management
-* Additional protection between users and the AWS environment
+The integration demonstrates:
 
-The architecture therefore separates **edge traffic management** from the underlying AWS application infrastructure.
-
----
-
-# 🧰 Technology Stack
-
-### Cloud
-
-* AWS
-* Amazon VPC
-* Amazon ECS
-* AWS Fargate
-* Amazon ECR
-* Amazon RDS
-* Application Load Balancer
-* AWS IAM
-* AWS CloudWatch
-
-### Infrastructure
-
-* Terraform
-* Infrastructure as Code
-* AWS networking
-* Security groups
-* Subnets
-* Route tables
-* Internet Gateway
-
-### Containers
-
-* Docker
-* Docker Compose
-* ECS/Fargate
-* Container networking
-
-### Application
-
-* Python
-* FastAPI
-* PostgreSQL
-* SQLite
-
-### DevOps / SRE
-
-* GitHub Actions
-* CI/CD
-* Automated deployments
-* Monitoring
-* Observability
-* Grafana
-* Logging
-* Production debugging
-* Infrastructure automation
-
-### Edge / Security
-
-* Cloudflare
 * DNS
 * TLS/SSL
 * HTTPS
-* Secure HTTP headers
+* Edge traffic management
+* CDN capabilities
+* Caching
+* Additional protection between users and AWS
+
+The resulting architecture separates **edge services from application infrastructure**.
 
 ---
 
-# 🎯 Engineering Objectives
+# 🛠️ Engineering & Troubleshooting
 
-This project was designed to demonstrate the following real-world engineering capabilities:
+A major objective of this project is demonstrating the ability to troubleshoot across multiple layers of a cloud environment.
 
-### 1. Infrastructure Automation
+Potential troubleshooting domains include:
 
-Provision an entire AWS environment through Terraform rather than manually configuring resources.
+### Application Layer
 
-### 2. Cloud Networking
+* FastAPI application errors
+* API connectivity
+* Application ports
+* Environment configuration
 
-Design VPC networking, subnet segmentation, routing, security boundaries, and application connectivity.
+### Container Layer
 
-### 3. Containerized Infrastructure
+* Docker builds
+* Container startup failures
+* ECS task failures
+* Image availability
+* Container health checks
 
-Package and deploy applications using Docker and ECS/Fargate.
+### Networking Layer
 
-### 4. Production Reliability
+* VPC routing
+* Subnet connectivity
+* Security groups
+* ALB target connectivity
+* Application-to-database communication
 
-Implement health checks, monitoring, centralized logging, automated deployments, and observable infrastructure.
+### AWS Infrastructure
 
-### 5. Security
+* IAM permissions
+* ECS service configuration
+* ECR image deployment
+* RDS connectivity
+* CloudWatch logs and metrics
 
-Apply IAM, network segmentation, security groups, TLS, and restricted database access.
-
-### 6. Operational Automation
-
-Use GitHub Actions and Terraform to create repeatable deployment workflows.
-
-### 7. Troubleshooting
-
-Demonstrate the ability to diagnose application, networking, container, and infrastructure issues across multiple layers of the stack.
+This demonstrates a **full-stack infrastructure troubleshooting mindset**, rather than focusing exclusively on a single layer.
 
 ---
 
@@ -345,14 +429,16 @@ aws configure
 
 ---
 
-## Deploy Infrastructure
-
-Clone the repository:
+# 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/CloudTechs-ai/CloudTechs-AI.git
-cd CloudTechs-AI
+git clone https://github.com/CloudTechs-ai/Ads-Platform.git
+cd Ads-Platform
 ```
+
+---
+
+# 🏗 Deploy Infrastructure
 
 Initialize Terraform:
 
@@ -360,7 +446,7 @@ Initialize Terraform:
 terraform init
 ```
 
-Review the infrastructure plan:
+Review the planned infrastructure:
 
 ```bash
 terraform plan
@@ -388,7 +474,7 @@ Run locally:
 docker run -p 8000:8000 ads-platform
 ```
 
-The application can then be accessed locally through:
+Application:
 
 ```text
 http://localhost:8000
@@ -396,40 +482,83 @@ http://localhost:8000
 
 ---
 
-# 🌐 Application
+# 🌐 Production Architecture
 
-Live deployment:
+The production-style request path is:
 
-**adsplatform.dev**
-
-The production architecture routes users through Cloudflare → AWS Application Load Balancer → ECS/Fargate → RDS PostgreSQL.
-
----
-
-# 📈 Future Improvements
-
-Potential enhancements include:
-
-* Amazon EKS migration
-* Kubernetes network policies
-* AWS Transit Gateway
-* Site-to-Site VPN
-* Multi-region deployment
-* AWS WAF
-* Route 53 integration
-* Auto Scaling policies
-* Blue/green deployments
-* Disaster recovery automation
-* Terraform remote state
-* Terraform modules
-* Automated security scanning
-* Prometheus/Grafana observability
-* Centralized SIEM integration
-* Automated infrastructure testing
+```text
+User
+ │
+ ▼
+Cloudflare
+ │
+ ▼
+AWS Application Load Balancer
+ │
+ ▼
+Amazon ECS
+ │
+ ▼
+AWS Fargate
+ │
+ ▼
+FastAPI Application
+ │
+ ▼
+Amazon RDS PostgreSQL
+```
 
 ---
 
-# 👨‍💻 CloudTechs
+# 📈 Future Engineering Enhancements
+
+Potential next-stage improvements include:
+
+* ☸️ Amazon EKS migration
+* 🔐 AWS WAF
+* 🌐 Route 53 integration
+* 🔄 Blue/green deployments
+* 📦 Reusable Terraform modules
+* 🗃️ Terraform remote state
+* 📈 ECS Auto Scaling
+* 🌎 Multi-region architecture
+* 🔥 Disaster recovery automation
+* 🛡️ Automated security scanning
+* 📊 Prometheus/Grafana observability
+* 🔐 Kubernetes NetworkPolicies
+* 🌐 AWS Transit Gateway
+* 🔗 Site-to-Site VPN
+* 🧪 Automated infrastructure testing
+* 🛡️ Centralized SIEM integration
+
+---
+
+# 💼 What This Project Demonstrates to Employers
+
+This project is intended to demonstrate hands-on ability across the modern cloud engineering lifecycle:
+
+**Design → Provision → Secure → Containerize → Deploy → Monitor → Troubleshoot → Automate**
+
+Specifically:
+
+| Engineering Area       | Demonstrated Technologies              |
+| ---------------------- | -------------------------------------- |
+| Cloud                  | AWS                                    |
+| Infrastructure as Code | Terraform                              |
+| Networking             | VPC, Subnets, Routing, Security Groups |
+| Containers             | Docker, ECS, Fargate                   |
+| Databases              | RDS PostgreSQL                         |
+| Load Balancing         | Application Load Balancer              |
+| Security               | IAM, Security Groups, TLS, Cloudflare  |
+| CI/CD                  | GitHub Actions                         |
+| Observability          | CloudWatch, Grafana                    |
+| Application            | Python, FastAPI                        |
+| Edge                   | Cloudflare                             |
+| Operations             | Monitoring, Logging, Troubleshooting   |
+
+---
+
+# ☁️ CloudTechs
 
 **CloudTechs — Cloud & DevOps Engineering**
 
@@ -437,19 +566,20 @@ Building practical cloud infrastructure with a focus on:
 
 **AWS • Terraform • Kubernetes • Infrastructure Automation • SRE • Cloud Networking • Platform Engineering**
 
-<img width="200" height="200" alt="hashicorp-certified-terraform-associate-004" src="https://github.com/user-attachments/assets/287a120a-dbe0-441a-a54f-9afe063723ed" />
+---
 
-<img width="200" height="200" alt="aws-certified-solutions-architect-associate" src="https://github.com/user-attachments/assets/283c46d6-084e-473b-859f-f8d8a7515ce3" />
+## 📜 Certifications
 
-<img width="200" height="200" alt="ccna" src="https://github.com/user-attachments/assets/0670cbcc-0b0a-4c1d-9838-8d42ae0a0cb4" />
+![Terraform](https://private-user-images.githubusercontent.com/295695252/639167150-287a120a-dbe0-441a-a54f-9afe063723ed.png)
 
-<img width="200" height="200" alt="comptia-security-ce-certification (2)" src="https://github.com/user-attachments/assets/76bb47c2-925a-4250-a6a3-ae5cf1859012" />
+![AWS Solutions Architect](https://private-user-images.githubusercontent.com/295695252/639167933-283c46d6-084e-473b-859f-f8d8a7515ce3.png)
+
+![CCNA](https://private-user-images.githubusercontent.com/295695252/639168462-0670cbcc-0b0a-4c1d-9838-8d42ae0a0cb4.png)
+
+![CompTIA Security+](https://private-user-images.githubusercontent.com/295695252/639169781-76bb47c2-925a-4250-a6a3-ae5cf1859012.png)
 
 ---
 
 ## 📜 License
 
 This project is provided for educational and demonstration purposes.
-
-
-
