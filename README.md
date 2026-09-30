@@ -434,7 +434,7 @@ aws configure
 
 ```bash
 git clone https://github.com/CloudTechs-ai/Ads-Platform.git
-cd Ads-Platform
+cd Ads-Platform/terraform/aws
 ```
 
 ---
